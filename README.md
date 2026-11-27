@@ -36,4 +36,8 @@ macOS 包装器未通过 Apple 公证。真实 Mac 上的桌面层、登录启�
 
 macOS 构建脚本位于 `mac/build.py`。需要 Python 3.11 或更新版本和官方 Electron v45.5.0 的 macOS ZIP。[Electron v45.5.0](https://github.com/electron/electron/releases/tag/v45.5.0)
 
-《星露谷物语》原作归 ConcernedApe。网页移植的授权文件随发行包附在 `game/LICENSE`。
+## 许可证
+
+本仓库的 Windows 和 macOS 壁纸宿主源码、构建和安装脚本采用 MIT 许可证。[查看许可证](LICENSE)
+
+《星露谷物语》原作及游戏素材归 ConcernedApe。网页移植资源和第三方运行时沿用各自的授权文件。网页移植的授权文件位于 `game/LICENSE`。

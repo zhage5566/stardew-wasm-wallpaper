@@ -49,6 +49,7 @@ def package(runtime_dir, release, arch):
         for name in ("package.json", "main.js", "game-host.js", "menubar.png"):
             put(output, resources + "app/" + name, (SOURCE / name).read_bytes())
         put(output, "开始使用.txt", (SOURCE / "开始使用.txt").read_bytes())
+        put(output, "LICENSE", (SOURCE.parent / "LICENSE").read_bytes())
 
     with zipfile.ZipFile(runtime) as upstream, zipfile.ZipFile(draft) as output:
         if output.testzip() is not None:

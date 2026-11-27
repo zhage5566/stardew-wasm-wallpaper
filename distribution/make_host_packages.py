@@ -28,11 +28,13 @@ def make(assets, output):
             ):
                 update.writestr(filename, full.read(entry))
         add(update, "开始使用.txt", PROJECT / "distribution/README-Windows.txt")
+        add(update, "LICENSE", PROJECT / "LICENSE")
     with zipfile.ZipFile(mac, "w") as installer:
         add(installer, "install.command", PROJECT / "mac/install.command", executable=True)
         for name in ("launch", "Info.plist", "package.json", "main.js", "game-host.js", "menubar.png"):
             add(installer, "app/" + name, PROJECT / "mac" / name)
         add(installer, "开始使用.txt", PROJECT / "distribution/README-macOS.txt")
+        add(installer, "LICENSE", PROJECT / "LICENSE")
     for output_file in (windows, mac):
         with zipfile.ZipFile(output_file) as archive:
             if archive.testzip() is not None:
