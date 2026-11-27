@@ -1,0 +1,12 @@
+星露谷壁纸 · macOS 预览版
+桌面版制作 zhouyang
+
+1. 根据电脑芯片选择 Apple 芯片版（arm64）或 Intel 版（x64）。完整解压本 ZIP。
+2. 同时下载并完整解压本次 GitHub Release 的 Windows 便携 ZIP。把 Stardew Wallpaper.app 与 Windows 便携包里的 game 文件夹放在同一目录，也可以在首次运行时选择 game 文件夹。
+3. 双击 Stardew Wallpaper.app。游戏资源在本地加载。请等待桌面出现游戏画面。
+4. 按 Command+Option+F10 切换壁纸和全屏试玩，也可在菜单栏打开「全屏试玩」。试玩模式接收键鼠，切回壁纸后可继续使用 Finder 桌面。
+5. 菜单栏提供「选择显示器」「设为常用壁纸」「登录时自动启动」和「退出」。先将 App 移到常用位置，再开启登录时自动启动。
+
+需要 macOS 13 或更新版本。该 App 包装器没有 Apple 公证。macOS 首次运行若拦截，请在「系统设置 → 隐私与安全性」中查看并按系统提示确认。
+本版尚未在真实 Mac 上验证桌面层、登录启动和键盘。存档写入本机的 ~/Library/Application Support/Stardew Wallpaper。
+《星露谷物语》原作 ConcernedApe。

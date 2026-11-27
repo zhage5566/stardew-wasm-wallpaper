@@ -1,0 +1,8 @@
+{
+  "title": "Stardew Valley · Playable Wallpaper",
+  "description": "Playable Stardew Valley WebAssembly wallpaper. Desktop integration by zhouyang.",
+  "file": "StardewWallpaperEngine.exe",
+  "type": "application",
+  "visibility": "private",
+  "version": 1
+}

@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+bundle=$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd -P)
+export STARDEW_APP_BUNDLE="$bundle"
+resources="$bundle/Contents/Resources"
+exec "$resources/Electron.app/Contents/MacOS/Electron" "$resources/app"

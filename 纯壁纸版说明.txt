@@ -1,0 +1,22 @@
+星露谷纯壁纸版 · Windows
+
+1. 完整解压后双击「启动星露谷纯壁纸版.exe」。程序直接嵌到 Windows 桌面图标后方，自动以带背景音乐的版本启动。
+2. 显示桌面，把鼠标移到游戏画面的空白处即可控制游戏。鼠标移到桌面图标上，图标照常点击。键盘跟随鼠标，桌面在前台且鼠标位于游戏空白区时，键盘交给游戏。移出后会释放游戏中的按键。
+3. 此版本统一使用 Windows 鼠标指针。游戏内绘制的普通鼠标图标由宿主的运行时补丁停用。
+4. 在系统托盘的「星露谷壁纸 · zhouyang」菜单中可以选择显示器、设为常用壁纸、开机自启动、暂停游戏控制或退出。选择「设为常用壁纸」会记住所选屏幕。「开机自启动」默认关闭，开启后会在登录 Windows 时自动运行。Ctrl+Alt+F10 切换游戏控制。
+5. 退出前先在游戏里保存。该版本与之前的窗口版使用同一个本地 WebView2 配置和存档目录。请先退出旧版再启动本版。
+
+选择「自动跟随主显示器」后，壁纸会按主显示器的尺寸和缩放调整。指定显示器暂时断开时会回到主屏，重新连接时尝试恢复。
+
+Wallpaper Engine 用户可以退出独立版后，在壁纸编辑器里选「创建壁纸」，导入同目录的 StardewWallpaperEngine.exe，作为本地 Application 壁纸使用。project.json 也包含一个可用于 Wallpaper Engine 本地打开的项目定义。建议把整套文件解压到不含中文的短路径，项目和 game 文件夹需要留在一起。
+
+配置目录为 %LOCALAPPDATA%\StardewWasmWallpaper\WebView2。启动问题可查看同级 desktop.log。
+需要 64 位 Windows 和 Microsoft Edge WebView2 Runtime。已验证 Windows 11。首次启动会读取随包附带的本地资源，可能需要片刻。
+WebView2 Runtime 下载链接
+https://developer.microsoft.com/microsoft-edge/webview2/
+
+使用的网页移植项目与提交
+https://github.com/degloved-net/stardew-wasm
+a664842611f09771f9155b9718046649bcaded33
+安装包内游戏文件按上游哈希校验。纯壁纸宿主只在加载时修改当前版本的光标绘制。
+桌面版制作 zhouyang。上游授权文件在 game\LICENSE。《星露谷物语》原作归 ConcernedApe。
