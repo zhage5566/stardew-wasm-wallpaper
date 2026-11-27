@@ -698,8 +698,8 @@ internal sealed class LocalGameContent
                         " exports.WasmBootstrap.Resize(nw, nh); pixelWidth = nw; pixelHeight = nh; } catch {}")
                     .Replace("}).observe(canvas);", "};\nnew ResizeObserver(resizeGame).observe(canvas);\n" +
                         "addEventListener('resize', resizeGame);\n" +
-                        "function watchDpi() { matchMedia('(resolution: ' + devicePixelRatio + 'dppx)').addEventListener(" +
-                        "'change', () => { resizeGame(); watchDpi(); }, { once: true }); }\nwatchDpi();");
+                        "let lastDpr = devicePixelRatio;\nsetInterval(() => { " +
+                        "if (lastDpr !== devicePixelRatio) { lastDpr = devicePixelRatio; resizeGame(); } }, 250);");
                 return new MemoryStream(Encoding.UTF8.GetBytes(script), false);
             }
             if (part == "_framework/blazor.boot.json")

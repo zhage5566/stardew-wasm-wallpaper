@@ -68,11 +68,10 @@ function patchResize(script) {
     `};
 new ResizeObserver(resizeGame).observe(canvas);
 addEventListener('resize', resizeGame);
-function watchDpi() {
-  matchMedia('(resolution: ' + devicePixelRatio + 'dppx)').addEventListener('change',
-    () => { resizeGame(); watchDpi(); }, { once: true });
-}
-watchDpi();`);
+let lastDpr = devicePixelRatio;
+setInterval(() => {
+  if (lastDpr !== devicePixelRatio) { lastDpr = devicePixelRatio; resizeGame(); }
+}, 250);`);
 }
 
 function install(session, folder) {
