@@ -27,7 +27,7 @@ internal sealed class WallpaperSettings
     {
         if (!enabled)
         {
-            File.Delete(favoritePath);
+            if (File.Exists(favoritePath)) File.Delete(favoritePath);
             return;
         }
         Directory.CreateDirectory(Path.GetDirectoryName(favoritePath));

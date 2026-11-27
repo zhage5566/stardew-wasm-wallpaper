@@ -692,7 +692,7 @@ internal sealed class LocalGameContent
                 // A DPI transition can change devicePixelRatio independently of
                 // the CSS box. Keep the game's own Resize callback for both.
                 string script = File.ReadAllText(path).Replace("new ResizeObserver(() => {",
-                        "let pixelWidth = w, pixelHeight = h;\nconst resizeGame = () => {")
+                        "let pixelWidth = 0, pixelHeight = 0;\nconst resizeGame = () => {")
                     .Replace("if (nw > 0 && nh > 0) try { exports.WasmBootstrap.Resize(nw, nh); } catch {}",
                         "if (nw > 0 && nh > 0 && (nw !== pixelWidth || nh !== pixelHeight)) try {" +
                         " exports.WasmBootstrap.Resize(nw, nh); pixelWidth = nw; pixelHeight = nh; } catch {}")

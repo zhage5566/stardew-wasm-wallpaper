@@ -59,7 +59,7 @@ addEventListener('DOMContentLoaded', () => {
 
 function patchResize(script) {
   script = replace(script, 'new ResizeObserver(() => {',
-    'let pixelWidth = w, pixelHeight = h;\nconst resizeGame = () => {');
+    'let pixelWidth = 0, pixelHeight = 0;\nconst resizeGame = () => {');
   script = replace(script,
     'if (nw > 0 && nh > 0) try { exports.WasmBootstrap.Resize(nw, nh); } catch {}',
     'if (nw > 0 && nh > 0 && (nw !== pixelWidth || nh !== pixelHeight)) try {' +
