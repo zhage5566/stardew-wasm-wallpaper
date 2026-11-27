@@ -6,7 +6,7 @@
 
 ## 下载和使用
 
-从 [Releases](https://github.com/zhage5566/stardew-wasm-wallpaper/releases) 下载 Windows 便携 ZIP，完整解压后运行「启动星露谷纯壁纸版.exe」。需要 64 位 Windows 和 Microsoft Edge WebView2 Runtime。
+从 Releases 下载 Windows 宿主 ZIP，解压后把现有的 `game` 文件夹放在「启动星露谷纯壁纸版.exe」旁边。没有游戏资源时，可解压固定版本的上游 ZIP，将包含 `index.html` 和 `_framework` 的目录改名为 `game`。需要 64 位 Windows 和 Microsoft Edge WebView2 Runtime。[GitHub Releases](https://github.com/zhage5566/stardew-wasm-wallpaper/releases) · [对应游戏资源 ZIP](https://codeload.github.com/degloved-net/stardew-wasm/zip/a664842611f09771f9155b9718046649bcaded33)
 
 - 桌面在前台时，移动鼠标到游戏空白区即可使用键盘和鼠标。移到图标或任务栏上，输入交回 Windows。
 - 按 `Ctrl+Alt+F10` 暂停或恢复游戏控制。也可在系统托盘选择显示器或退出。
@@ -20,7 +20,7 @@
 
 ### macOS 预览版
 
-按电脑芯片下载 Apple 芯片版（arm64）或 Intel 版（x64）。把 `Stardew Wallpaper.app` 放在 Windows 便携包的 `game` 文件夹旁边，或首次运行时选择该文件夹。需要 macOS 13 或更新版本。按 `Command+Option+F10` 进入全屏试玩或返回壁纸。菜单栏可保存常用显示器和设置登录自动启动。
+从 Releases 下载 macOS 安装器，完整解压后双击 `install.command`。脚本会识别 Apple 芯片或 Intel 处理器，校验官方 Electron ZIP，并生成 `Stardew Wallpaper.app`。把 App 放在上面的 `game` 文件夹旁边，或首次运行时选择该文件夹。需要 macOS 13 或更新版本。按 `Command+Option+F10` 进入全屏试玩或返回壁纸。菜单栏可保存常用显示器和设置登录自动启动。
 
 macOS 包装器未通过 Apple 公证。真实 Mac 上的桌面层、登录启动和键盘仍待实机验证。
 
